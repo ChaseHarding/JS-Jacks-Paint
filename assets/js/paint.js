@@ -1,15 +1,19 @@
 function configureListeners() {
-    let images = // select img elements  
+    let images = document.getElementById('img') // select img elements  
 
 
      for (var i = 0; i < images.length; i++) {        
-        // iterate over images and add mouseover event listeners      
+        // iterate over images and add mouseover event listeners 
+        document.getElementById(images[i].id).addEventListener('mouseover', addopacity, false) 
+        document.getElementById(images[i].id).addEventListener('mouseout', removeOpacity, true)    
     } 
 }
 
 function addOpacity(event) {
     // add appropriate CSS class
-    getProductInfo(event.target.id);     
+    getProductInfo(event.target.id); 
+    
+
 }
 
 function removeOpacity(event) {
