@@ -19,9 +19,10 @@ function addOpacity(event) {
 
 function removeOpacity(event) {
      //remove appropriate CSS class
-     if (!this.classList.contains('dim')){
+     if (this.classList.contains('dim')){
         this.classList.remove('dim');
-        this.style.opacity = '1';
+        // this.style.opacity = '1'; //i had copied the above function and never removed the ! infront of 
+        //this in line 22. Spent a long time figring out why the square would not return to full opaqueness
     }
 
     let element = document.getElementById('color-price');
